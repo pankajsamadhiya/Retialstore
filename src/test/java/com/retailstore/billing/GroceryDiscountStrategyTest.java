@@ -4,6 +4,7 @@ package com.retailstore.billing;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -39,6 +40,7 @@ public class GroceryDiscountStrategyTest {
 		billing  = new Billing(discountStrategy,billDto);
 	}
 	
+	@Test
 	public void testCalculateFinalBillAmount(){
 		when(billDto.getBillAmount()).thenReturn(200.0);
 		groceryDiscountStrategy.calculateFinalBillAmount(billing);
